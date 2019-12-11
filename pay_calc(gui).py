@@ -9,8 +9,8 @@ import os
 sg.change_look_and_feel('Kayak')
 
 tab1_layout = [[sg.Txt('\nPay Calculator\n')],  
-         [sg.Txt('-'*50)],
-         [sg.Txt('Pay: $'), sg.In(size=(5,1), key='wage'), sg.Txt('/hr.')],          
+               [sg.Txt('-'*50)],
+               [sg.Txt('Pay: $'), sg.In(size=(5,1), key='wage'), sg.Txt('/hr.')],          
 	       [sg.In(size=(5,1), key='hours'), sg.Txt('Hours')],
 	       [sg.Txt('Tax Percentage:'), sg.In(size=(3,1), key='percent'), sg.Txt('%')],     
 	       [sg.Txt('-'*50)],
@@ -50,14 +50,14 @@ while True:
         ot_hours = hours - 40
         ot_pay = ot_wage * ot_hours
         gross = pay + ot_pay
-        
-     tax_per = percent / float(100)
-     tax = gross * tax_per
-     net = gross - tax
-     
-     gross = 'Gross Pay: ${:.2f}'.format(gross)
-     net = 'Net Pay: ${:.2f}*'.format(net)
-     dis = '*estimated based on given tax percentage'
+
+      tax_per = percent / float(100)
+      tax = gross * tax_per
+      net = gross - tax
+
+      gross = 'Gross Pay: ${:.2f}'.format(gross)
+      net = 'Net Pay: ${:.2f}*'.format(net)
+      dis = '*estimated based on given tax percentage'
      
     except:
       gross = 'something went wrong'
