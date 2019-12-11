@@ -1,5 +1,5 @@
 #©2019 Charles L. Arnold
-#GNU GPL licenced
+#GNU GPL v3 licenced
 
 from prettytable import PrettyTable
 import os
@@ -7,9 +7,9 @@ import os
 os.system('cls' if os.name == 'nt' else 'clear')
 
 print('''
-	        "Pay Calculator"
+	     "Pay Calculator"
 	  ©2019 Charles L. Arnold
-          GNU GPL licenced''')
+            GNU GPL v3 licenced''')
 
 wage = float(input('\nEnter hourly wage: $'))
 hours = float(input('\nEnter hours worked: '))
